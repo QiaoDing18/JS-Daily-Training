@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			height: 100%;
+		}
+		body{
+			width: 100%;
+			height: 100%;
+		}
+		p{
+			font-size: 550%;
+		}
+		input{
+			width: 30%;
+			height: 10%;
+			font-size: 400%;
+		}
+	</style>
+	<script>
+	window.onload = function () {
+		var inPut = document.getElementsByTagName('input');
+		inPut[0].addEventListener('mouseover',function(e){
+			e.target.value = "是";
+			document.getElementsByTagName('input')[1].value = "否";
+		});
+		inPut[1].addEventListener('mouseover',function(e){
+			e.target.value = "是";
+			document.getElementsByTagName('input')[0].value = "否";
+		});
+	};
+	function haha() {
+		alert('你就是傻');
+	};
+
+	
+	</script>
+</head>
+<body>
+	<p>你是不是傻？</p>
+	<input type="button" value="否" onclick="haha()">
+	<input type="button" value="是" onclick="haha()">
+</body>
+</html>
