@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function displayInfo(args){
+			var output = "";
+
+			if(typeof args.name == "string"){
+				output += "姓名是：" + args.name + "\n";
+			}
+
+			if(typeof args.age == "number"){
+				output += "年龄是：" + args.age + "\n";
+			}
+
+			alert(output);
+		}
+
+		displayInfo({
+			name: "Joe",
+			age: 29
+		});
+
+		displayInfo({
+			name: "PaPa-Lee"
+		});
+	</script>
+</body>
+</html>

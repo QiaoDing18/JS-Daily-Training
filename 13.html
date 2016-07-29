@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			height: 100%;
+			background: -webkit-linear-gradient(#24C829, #FFD900, #0058D3); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(#24C829, #FFD900, #0058D3); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(#24C829, #FFD900, #0058D3); /* Firefox 3.6 - 15 */
+			background: linear-gradient(#24C829, #FFD900, #0058D3); /* 标准的语法 */
+		}
+		.dl1{
+			float: left;
+			width: 900px;
+			height: 150px;
+			margin: 50px 0 0 300px;
+			border-radius: 30px;
+		}
+		.dl1 dt{
+			float: left;
+			width: 280px;
+			height: 120px;
+			margin: 10px 10px 10px 10px;
+			background-color: #0058D3;
+			border-radius: 70px;
+			box-shadow: 0 5px 10px #011633;
+			text-align: center;
+			line-height: 120px;
+			font-size: 30px;
+			color: white;
+		}
+		.dl1 dt:hover{
+			transition: .2s;
+			-moz-transition: .2s; /* Firefox 4 */
+			-webkit-transition: .2s; /* Safari 和 Chrome */
+			-o-transition: .2s; /* Opera */
+			box-shadow: 0 10px 17px #011633;
+			cursor:pointer;
+		}
+		.dl1 dt:active{
+			opacity: .8;
+			box-shadow: 0 10px 15px #011633;
+		}
+		.show{
+			float: left;
+			width: 900px;
+			height: 500px;
+			margin: 20px 0 0 300px;
+		}
+		.show img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script>
+	window.onload = function allImg(argument) {
+		var myImg = document.getElementsByTagName('img');
+		for(i = 0; i < myImg.length; i++)
+		{
+			myImg[i].style.display = 'none';
+		}
+		myImg[0].style.display = 'block';
+
+		var oClick = document.getElementsByTagName('dt');
+		oClick[i].onclick = function(){
+			for(i = 0; i < oClick.length; i++)
+			{
+				myImg[i].style.display = 'none';
+			}
+			myImg[i].style.display = 'block';
+		}
+	}
+	</script>
+</head>
+<body>
+	<dl class="dl1">
+		<dt>加州</dt>
+		<dt>洛杉矶</dt>
+		<dt>纽约</dt>
+	</dl>
+	<div class="show">
+		<img src="http://att2.citysbs.com/hangzhou/2013/07/17/10/100345_12221374026625901_34de479f45ca20a587b62d3fb30eb2a8.jpg" alt="">
+		<img src="http://dimg04.c-ctrip.com/images/fd/vacations/g3/M06/12/CA/CggYGlYcnSKAMb9WAAMzRkHbhuE328.jpg" alt="">
+		<img src="http://img2.3lian.com/2014/f4/111/d/50.jpg" alt="">
+	</div>
+</body>
+</html>

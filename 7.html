@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#first{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		#second{
+			display: none;
+			width: 200px;
+			height:300px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="first" onmouseover="document.getElementById('second').style.display='block' " onmouseout="document.getElementById('second').style.display='none'">
+	</div>
+	<div id="second">
+
+	</div>
+</body>
+</html>
